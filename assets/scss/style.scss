@@ -1,0 +1,292 @@
+/*--------------------------------------------------------------------------
+Template name: Rokomari
+Template URI: https://rokomari.com
+Author Name: Rubel
+Author URI: 
+Tag: Modern, Agency, Business
+Verson: 1.0.0
+Description: Rokomari is a responsive html5 multipurpose template    
+
+===========================
+CSS Index
+===========================
+
+01. header
+
+------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "partials/variables";
+@import "partials/default";
+@import "partials/media_query";
+@import "partials/prefix";
+@import "partials/navigation";
+
+/*****************************
+   01. header
+*********************************/
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.search-form {
+	button[type="submit"] {
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: $hover;
+		color: $white;
+		width: 65px;
+		height: 100%;
+		border: 0;
+	}
+}
+.users-data {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			padding-right: 15px;
+			a {
+				img {
+					@include mobile {
+						width: 25px;
+					}
+				}
+			}
+		}
+	}
+	@include large {
+		text-align: right;
+	}
+}
+
+.search-form {
+	input {
+		height: 50px;
+		border-radius: 0;
+		border: 0;
+		&:focus {
+			box-shadow: none;
+		}
+	}
+
+}
+.book-list {
+	border-bottom: 1px solid $semi_hover;
+	.nav {
+		border: 0;
+		border-radius: 0;
+		&:hover {
+			border: 0;
+		}
+		.nav-link {
+			border: 0;
+			padding: .9rem;
+			&.dropdown-toggle {
+				color: $secondary_color;
+				&:after {
+					content: none;
+				}
+				i {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.nav-tabs {
+		.nav-item {
+			margin-bottom: 0;
+		}
+	} 
+	@include large {
+		.dropdown:hover {
+			.dropdown-menu {
+             display: block;
+             margin-top: 0; 
+          }
+		} 
+	}
+}
+
+.search-form {
+	border-top: 1px solid $dark;
+	border-left: 1px solid $dark;
+	border-bottom: 1px solid $semi_hover;
+}
+.main-menu {
+	.dropdown-toggle {
+		&:after {
+			content: none;
+		}
+		i {
+			font-size: 12px;
+		}
+	}
+	nav {
+		ul {
+			li {
+				a {
+					display: inline-block;
+                    color: $semi_black;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    @include large {
+                    	padding: 0 1.5rem !important;
+                    }
+				}
+			}
+		}
+	}
+		@include large {
+		.dropdown:hover {
+			.dropdown-menu {
+             display: block;
+             margin-top: 0; 
+          }
+		} 
+	}
+}
+
+/*****************************
+   02. Start Hero Area
+*********************************/
+
+.hero-area {
+	background-image: linear-gradient(to right, #180550, #2d096d, #440b8a, #5e0ba8, #7a05c6);
+}
+.hero-text {
+	@include tablet {
+		text-align: center;
+	}
+}
+/*****************
+03. Start Services Area
+*******************************/
+.single-service {
+	background-repeat: no-repeat;
+    background-position: top 20px center;
+}
+.products-area {
+	position: relative;
+	.single-product{
+		.card {
+			border-radius: 1rem;
+		}
+	}
+	.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    width: 100%;
+	}
+	.card-thumb-wrapper {
+		position: relative;
+	}
+	.product-meta {
+		border-top: 2px solid $dark_4;
+		.product-date,
+		.product-abailable {
+			img, p{
+				display: inline-block;
+			}
+		}
+		p {
+			margin-bottom: 0;
+			font-weight: 500;
+			color: $dark_2;
+			font-size: 14px;
+			padding-left: 10px;
+		}
+	}
+}
+
+/*****************
+04. Start Testimonial
+**********************/
+
+.testimonial-text {
+	position: relative;
+	&:before {
+      content: "";
+      background-image: url(../images/quote_left.png);
+      height: 250px;
+      width: 44px;
+      position: absolute;
+      left: -45px;
+      top: 0;
+      background-repeat: no-repeat;
+	}
+	&:after {
+      content: "";
+      background-image: url(../images/quote_right.png);
+      height: 250px;
+      width: 44px;
+      position: absolute;
+      right: 20px;
+      top: 100%;
+      background-repeat: no-repeat;
+	}
+	p {
+		margin-bottom: 0;
+		font-weight: 300;
+		font-size: 20px;
+	}
+}
+
+.rating-list {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			display: inline-block;
+			color: $yellow;
+		}
+	}
+}
+.carousel-control-prev,
+.carousel-control-next {
+	span {
+		color: $dark_5;
+		font-size: 30px;
+	}
+}
+
+/********************
+05. Start Footer
+**********************/
+
+.subscribe-info {
+	p {
+		margin-bottom: 0;
+		color: $dark_2;
+		font-size: 17px;
+	}
+}
+.subscribe-form {
+	input {
+		width: 75%;
+		height: 60px;
+		background-color: $dark_6;
+	}
+	button[type="submit"] {
+		position: absolute;
+		right: -2px;
+		top: 0;
+		height: 100%;
+		width: 160px;
+		color: $white;
+		border: 0;
+		background-color: $hover_3;
+		border-radius: 5px;
+	}
+}
+.footer-area {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
